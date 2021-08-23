@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="item one">one</div>
+        <div class="item two">two</div>
+        <div class="item three">three</div>
+        <div class="item four">four</div>
+        <div class="item five">five</div>
+    </div>
+    <div class="controlers-container">
+        <select name="flexDirection" class="dropdown" id="flex-direction">
+            <option value="row">Flex direction: row</option>
+            <option value="column">Flex direction: column</option>
+        </select>
+        <select name="justifyContent" class="dropdown" id="justify-content">
+            <option value="flex-start">Justify content: flex-start</option>
+            <option value="flex-end">Justify content: flex-end</option>
+            <option value="center">Justify content: center</option>
+            <option value="space-between">Justify content: space between</option>
+            <option value="space-around">Justify content: space around</option>
+            <option value="space-evenly">Justify content: space evenly</option>
+        </select>
+        <select name="alignItems" class="dropdown" id="align-items">
+            <option value="stretch">align items: stretch</option>
+            <option value="flex-start">align items: flex-start</option>
+            <option value="flex-end">align items: flex-end</option>
+            <option value="center">center</option>
+            <option value="baseline">baseline</option>
+        </select>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

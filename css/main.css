@@ -1,0 +1,49 @@
+body {
+    font-family: 'Urbanist', sans-serif; 
+    
+}
+
+
+.demo-container {
+    height: 600px;
+    width: 800px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    margin: 30px auto 0 auto;
+    
+}
+
+.controlers-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto 0 auto;
+    width: 800px;
+
+}
+
+.item {
+    color: #999999;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.one {
+    background-color: #ffb3ba;
+}
+
+.two {
+    background-color: #ffdfba;
+}
+
+.three {
+    background-color: #ffffba;
+}
+
+.four {
+    background-color: #baffc9;
+}
+
+.five {
+    background-color: #bae1ff;
+}
