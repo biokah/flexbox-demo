@@ -2,6 +2,15 @@ body {
     font-family: 'Urbanist', sans-serif; 
 }
 
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.demo-wrapper {
+    min-height: 670px;
+}
+
 .demo-container {
     height: 600px;
     width: 800px;
@@ -10,6 +19,7 @@ body {
     justify-content: center;
     margin: 30px auto 0 auto;
     position: relative;
+    resize: both;
 }
 
 .demo-container::before {
@@ -53,12 +63,30 @@ body {
 }
 
 
-.controlers-container {
+.controlers-container, .size-controllers {
     display: flex;
     justify-content: space-between;
     margin: 30px auto 0 auto;
     width: 800px;
 
+}
+
+.size-controllers div span::after {
+    content: 'px';
+    position: relative;
+}
+
+select {
+    font-family: 'Urbanist', sans-serif;
+    border-radius: 5px;
+}
+
+select::before {
+    content: '';
+    background: red;
+    position: absolute;
+    width: 10px;
+    height: 10px;
 }
 
 .item {

@@ -11,41 +11,70 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="demo-container">
-        <div class="item one">one</div>
-        <div class="item two">two</div>
-        <div class="item three">three</div>
-        <div class="item four">four</div>
-        <div class="item five">five</div>
-        <div class="y axis">cross axis</div>
-        <div class="x axis">primary axis</div>
+    <h1>Flexbox magic</h1>
+    <div class="demo-wrapper">
+        <div class="demo-container">
+        
+            <div class="item one">one</div>
+            <div class="item two">two</div>
+            <div class="item three">three</div>
+            <div class="item four">four</div>
+            <div class="item five">five</div>
+            <div class="y axis">cross axis</div>
+            <div class="x axis">primary axis</div>
+        </div>
     </div>
+    
     <div class="controlers-container">
-        <select name="flexDirection" class="dropdown" id="flex-direction">
-            <option value="row">flex direction: row</option>
-            <option value="column">flex direction: column</option>
-        </select>
-        <select name="justifyContent" class="dropdown" id="justify-content">
-            <option value="flex-start">justify content: flex-start</option>
-            <option value="flex-end">justify content: flex-end</option>
-            <option value="center">justify content: center</option>
-            <option value="space-between">justify content: space between</option>
-            <option value="space-around">justify content: space around</option>
-            <option value="space-evenly">justify content: space evenly</option>
-        </select>
-        <select name="alignItems" class="dropdown" id="align-items">
-            <option value="stretch">align items: stretch</option>
-            <option value="flex-start">align items: flex-start</option>
-            <option value="flex-end">align items: flex-end</option>
-            <option value="center">align items:center</option>
-            <option value="baseline">align items: baseline</option>
-        </select>
+        <div>
+            <label for="">Flex-direction</label>
+            <select name="flexDirection" class="dropdown" id="flex-direction">
+                <option value="row">row</option>
+                <option value="column">column</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Justify-content</label>
+            <select name="justifyContent" class="dropdown" id="justify-content">
+                <option value="flex-start">Flex-start</option>
+                <option value="flex-end">Flex-end</option>
+                <option value="center">Center</option>
+                <option value="space-between">Space between</option>
+                <option value="space-around">Space around</option>
+                <option value="space-evenly">Space evenly</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Align-items</label>
+            <select name="alignItems" class="dropdown" id="align-items">
+                <option value="stretch">Stretch</option>
+                <option value="flex-start">Flex-start</option>
+                <option value="flex-end">Flex-end</option>
+                <option value="center">Items:center</option>
+                <option value="baseline">Baseline</option>
+            </select>
+        </div>
+        
         <div>
             <input id="axis-checkbox" type="checkbox" checked>
             <label for="">Show axis</label>
         </div>
+    </div>
+    <div class="size-controllers">
+        <div>
+            <label for="">Width:</label>
+            <input type="range" id="width-range" value="1200" min="360" max="1400" name="width">
+            <span id="width-text">1200</span>
+        </div>
+        <div>
+            <label for="">Height:</label>
+            <input type="range" id="height-range" value="800" min="600" max="1000" name="height">
+            <span id="height-text">800</span>
+        </div>
+        
         
     </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>
