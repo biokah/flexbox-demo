@@ -7,6 +7,16 @@ h1 {
     width: 100%;
 }
 
+button {
+    background-color: #d6d6d6;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    font-family: 'Urbanist', sans-serif; 
+    padding: 3px 10px;
+    margin-right: 30px;
+}
+
 .demo-wrapper {
     min-height: 670px;
 }
@@ -63,12 +73,21 @@ h1 {
 }
 
 
-.controlers-container, .size-controllers {
+.controlers-container, .size-controllers, .element-container, .main-controllers {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     margin: 30px auto 0 auto;
     width: 800px;
+}
 
+.controlers-container {
+    justify-content: space-between;
+
+}
+
+.size-controllers div, .element-container div {
+    margin-right: 30px;
 }
 
 .size-controllers div span::after {
@@ -112,4 +131,8 @@ select::before {
 
 .five {
     background-color: #bae1ff;
+}
+
+input[type="range"] {
+    cursor: pointer;
 }

@@ -14,18 +14,24 @@
     <h1>Flexbox magic</h1>
     <div class="demo-wrapper">
         <div class="demo-container">
-        
-            <div class="item one">one</div>
-            <div class="item two">two</div>
-            <div class="item three">three</div>
-            <div class="item four">four</div>
-            <div class="item five">five</div>
+            <div class="item one" id="one">one</div>
+            <div class="item two" id="two">two</div>
+            <div class="item three" id="three">three</div>
+            <div class="item four" id="four">four</div>
+            <div class="item five" id="five">five</div>
             <div class="y axis">cross axis</div>
             <div class="x axis">primary axis</div>
         </div>
     </div>
-    
+    <div class="main-controllers">
+        <button>Clear all</button>
+        <div>
+            <input id="axis-checkbox" type="checkbox" checked>
+            <label for="">Show axis</label>
+        </div>
+    </div>
     <div class="controlers-container">
+        
         <div>
             <label for="">Flex-direction</label>
             <select name="flexDirection" class="dropdown" id="flex-direction">
@@ -36,29 +42,26 @@
         <div>
             <label for="">Justify-content</label>
             <select name="justifyContent" class="dropdown" id="justify-content">
-                <option value="flex-start">Flex-start</option>
-                <option value="flex-end">Flex-end</option>
-                <option value="center">Center</option>
-                <option value="space-between">Space between</option>
-                <option value="space-around">Space around</option>
-                <option value="space-evenly">Space evenly</option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-between">space between</option>
+                <option value="space-around">space around</option>
+                <option value="space-evenly">space evenly</option>
             </select>
         </div>
         <div>
             <label for="">Align-items</label>
             <select name="alignItems" class="dropdown" id="align-items">
-                <option value="stretch">Stretch</option>
-                <option value="flex-start">Flex-start</option>
-                <option value="flex-end">Flex-end</option>
-                <option value="center">Items:center</option>
-                <option value="baseline">Baseline</option>
+                <option value="stretch">stretch</option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">items:center</option>
+                <option value="baseline">baseline</option>
             </select>
         </div>
         
-        <div>
-            <input id="axis-checkbox" type="checkbox" checked>
-            <label for="">Show axis</label>
-        </div>
+       
     </div>
     <div class="size-controllers">
         <div>
@@ -71,7 +74,28 @@
             <input type="range" id="height-range" value="800" min="600" max="1000" name="height">
             <span id="height-text">800</span>
         </div>
-        
+    </div>
+    <div class="element-container">
+        <div>
+            <label for="">Element:</label>
+            <select name="element" class="dropdown" id="element">
+                <option value="one">one</option>
+                <option value="two">two</option>
+                <option value="three">three</option>
+                <option value="four">four</option>
+                <option value="five">five</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Property:</label>
+            <select name="property" class="dropdown" id="property">
+                <option value="none">none</option>
+                <option value="flex-grow">flex-grow</option>
+                <option value="flex-shrink">flex-shrink</option>
+                <option value="alig-self">align-self</option>
+                <option value="order">order</option>
+            </select>
+        </div>
         
     </div>
 
