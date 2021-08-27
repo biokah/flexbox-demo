@@ -63,6 +63,7 @@ const clearAll = () => {
     Array.from(document.getElementsByTagName('select')).forEach(item => {
         item.getElementsByTagName('option')[0].selected = 'selected';
     })
+    clearItems();
 }
 
 const setElement = (e) => {
