@@ -140,3 +140,7 @@ input[type="range"] {
 .hidden-dropdown {
     display: none;
 }
+
+#value {
+    min-width: 50px;
+}

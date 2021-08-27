@@ -5,9 +5,9 @@ const button = document.getElementsByTagName('button')[0];
 
 
 const properties = {
-    flexGrow: [1, 2, 3],
-    flexShrink: [1, 10, 1000],
-    alignSelf: ['center', 'flex-start', 'flex-end', 'baseline'],
+    flexGrow: ['initial', 1, 2, 3],
+    flexShrink: ['initial', 1, 10, 1000],
+    alignSelf: ['initial', 'center', 'flex-start', 'flex-end', 'baseline'],
     order: [0, -1, 1]
 }
 
@@ -83,24 +83,27 @@ const clearItems = () => {
 }
 
 const setProperty = (e) => {
-    property = e.target.value;
-    if(e.value !== 'none') {
-        populateValues(e);
+    clearItems();
+    if(e.target.value !== 'none') {
+        property = e.target.value;
+        if(e.value !== 'none') {
+            populateValues(e);
+        }
     }
 }
 
 const populateValues = (e) => {
-    document.getElementById('value').innerHTML = ''
+    document.getElementById('value').innerHTML = '';
     properties[e.target.value].forEach(item => {
         document.getElementById('value').innerHTML = document.getElementById('value').innerHTML +
         `<option>${item}</option>`
-    })
-    document.getElementById('value-wrapper').classList.remove('hidden-dropdown')
+    });
+    document.getElementById('value-wrapper').classList.remove('hidden-dropdown');
 }
 
 const setValue = (e) => {
     let target = document.getElementById(element);
-    target.style[property] = e.target.value
+    target.style[property] = e.target.value;
 }
 
 init();
