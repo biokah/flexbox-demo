@@ -3,6 +3,14 @@ const axisElements = document.getElementsByClassName('axis');
 const dropdowns = document.getElementsByClassName('dropdown');
 const button = document.getElementsByTagName('button')[0];
 
+
+const properties = {
+    flexGrow: [1, 2, 3],
+    flexShrink: [1, 10, 1000],
+    alignSelf: ['center', 'flex-start', 'flex-end', 'baseline'],
+    order: [0, -1, 1]
+}
+
 let element = 'one';
 let property = 'none'
 
@@ -17,6 +25,7 @@ const init = () => {
     document.getElementById('element').addEventListener('change', setElement);
     document.getElementById('property').addEventListener('change', setProperty);
     button.addEventListener('click', clearAll);
+    document.getElementById('value').addEventListener('change', setValue)
 }
 
 const addValue = (e) => {
@@ -62,14 +71,35 @@ const setElement = (e) => {
         item.removeAttribute('style');
     })
     document.getElementById('property').getElementsByTagName('option')[0].selected = 'selected';
+    document.getElementById('value-wrapper').classList.add('hidden-dropdown');
+    clearItems();
+}
+
+const clearItems = () => {
+    Array.from(document.getElementsByClassName('item')).forEach(item => {
+        item.removeAttribute('style');
+    })
 }
 
 const setProperty = (e) => {
     property = e.target.value;
     if(e.value !== 'none') {
-        document.getElementById(element).style[e.target.value] = 1
+        populateValues(e);
     }
 }
 
+const populateValues = (e) => {
+    document.getElementById('value').innerHTML = ''
+    properties[e.target.value].forEach(item => {
+        document.getElementById('value').innerHTML = document.getElementById('value').innerHTML +
+        `<option>${item}</option>`
+    })
+    document.getElementById('value-wrapper').classList.remove('hidden-dropdown')
+}
+
+const setValue = (e) => {
+    let target = document.getElementById(element);
+    target.style[property] = e.target.value
+}
 
 init();

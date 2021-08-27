@@ -42,9 +42,9 @@
         <div>
             <label for="">Justify-content</label>
             <select name="justifyContent" class="dropdown" id="justify-content">
+                <option value="center">center</option>
                 <option value="flex-start">flex-start</option>
                 <option value="flex-end">flex-end</option>
-                <option value="center">center</option>
                 <option value="space-between">space between</option>
                 <option value="space-around">space around</option>
                 <option value="space-evenly">space evenly</option>
@@ -89,11 +89,16 @@
         <div>
             <label for="">Property:</label>
             <select name="property" class="dropdown" id="property">
-                <option value="none">none</option>
-                <option value="flex-grow">flex-grow</option>
-                <option value="flex-shrink">flex-shrink</option>
-                <option value="alig-self">align-self</option>
+                <option value="flexGrow">flex-grow</option>
+                <option value="flexShrink">flex-shrink</option>
+                <option value="alignSelf">align-self</option>
                 <option value="order">order</option>
+            </select>
+        </div>
+        <div id="value-wrapper" class="hidden-dropdown">
+            <label for="">Value:</label>
+            <select name="property" class="dropdown " id="value">
+                
             </select>
         </div>
         
