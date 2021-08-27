@@ -100,14 +100,6 @@ select {
     border-radius: 5px;
 }
 
-select::before {
-    content: '';
-    background: red;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-}
-
 .item {
     color: #999999;
     padding: 5px;

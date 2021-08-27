@@ -9,10 +9,10 @@ const properties = {
     flexShrink: ['initial', 1, 10, 1000],
     alignSelf: ['initial', 'center', 'flex-start', 'flex-end', 'baseline'],
     order: [0, -1, 1]
-}
+};
 
 let element = 'one';
-let property = 'none'
+let property = 'none';
 
 const init = () => {
     const dropdownElements = Array.from(dropdowns);
@@ -38,8 +38,7 @@ const addValue = (e) => {
 
 const setSize = (e) => {
     document.getElementById(`${e.target.name}-text`).innerText = e.target.value;
-    console.log(e.target.name, e.target.value)
-    demoContainer.style[e.target.name] = `${e.target.value * .666}px`
+    demoContainer.style[e.target.name] = `${e.target.value * .666}px`;
 }
 
 const toggleAxis = (e) => {
