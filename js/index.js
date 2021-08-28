@@ -29,6 +29,7 @@ const init = () => {
 }
 
 const addValue = (e) => {
+    console.log(e.target.value)
     demoContainer.style[e.target.name] = e.target.value;
     if (e.target.name === 'flexDirection') {
         setAxis(e.target.value);
