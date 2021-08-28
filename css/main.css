@@ -136,3 +136,35 @@ input[type="range"] {
 #value {
     min-width: 50px;
 }
+
+.mobile-modal {
+    display: none;
+}
+
+@media only screen and (max-width: 820px) {
+    body {
+        overflow: hidden;
+    }
+   
+    h1, .demo-container, .controlers-container, .size-controllers, .element-container, .main-controllers {
+        display: none;
+    }
+
+    .mobile-modal {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+        text-align: center;
+        margin: auto;
+        
+        
+    }
+
+    
+}
